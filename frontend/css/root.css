@@ -1,0 +1,10 @@
+:root {
+    --text-white: #F7F8FA;
+    --text-highlight: #f5f543;
+
+    --button-border: #40444e;
+    --button-border-hover: #646a7a;
+
+    --button-bg: rgba(30, 39, 61, .3);
+    --button-bg-hover: rgba(30, 39, 61, .8);
+}

@@ -1,0 +1,139 @@
+/* PLACE BET POPUP */
+
+.place-bet-container {
+    display: none;
+}
+
+.place-bet {
+    z-index: 2;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--text-white);
+}
+
+.place-bet-animation1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fade-out {
+    animation: fadeOut .3s ease forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.place-bet h1 {
+    margin: 25px;
+}
+
+.place-bet-buttons {
+    display: flex;
+}
+
+.place-bet-buttons button {
+    height: 55px;
+    width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.place-bet-action-button button:hover, .place-bet-action-button button:hover {
+    border-color: var(--button-border-hover);
+    background-color: var(--button-bg-hover);
+}
+
+.place-bet-action-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.place-bet-action-button button {
+    border: 1px solid var(--button-border);
+    background-color: var(--button-bg);
+    color: var(--text-white);
+}
+
+.place-bet-chip-button {
+    background-color: transparent;
+    border: none;
+}
+
+.place-bet-chip-button img {
+    height: 50px;
+}
+
+.place-bet-deal-now {
+    padding: 12px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    border: 1px solid var(--button-border);
+    background-color: var(--button-bg);
+    color: var(--text-white);
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 30px;
+}
+
+.deal-icon-shrink{
+    animation: dealIconShrinkAnimation 0.4s ease-in-out;
+}
+
+@keyframes dealIconShrinkAnimation {
+    from {
+        transform: scale(1); 
+    }
+  
+    to {
+        transform: scale(0.1); 
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.deal-icon-grow {
+    animation: dealIconGrowAnimation 0.4s ease-in-out;
+}
+
+@keyframes dealIconGrowAnimation {
+    from {
+        transform: scale(0.1);
+        opacity: 0;
+        visibility: hidden; 
+    }
+  
+    to {
+        transform: scale(1); 
+    }
+}
+
+.place-bet-deal-now:hover {
+    border-color: var(--button-border-hover);
+    background-color: var(--button-bg-hover);
+}
+
+.place-bet-deal-now span {
+    padding: 0px 10px 0px 0px;
+    font-size: 1.7rem;
+}

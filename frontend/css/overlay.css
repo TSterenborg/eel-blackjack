@@ -1,0 +1,124 @@
+/* OVERLAY */
+
+.overlay-top, .overlay-bottom {
+    min-height: 55px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* OVERLAY TOP */
+
+.overlay-top-left, .overlay-top-right {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    padding: 5px;
+}
+
+.overlay-top-right {
+    justify-content: flex-end;
+    z-index: 9999;
+}
+
+.overlay-top-right-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--button-border);
+    background-color: var(--button-bg);
+    color: var(--text-white);
+    border-radius: 50%;
+    height: 100%;
+    width: 45px;
+    margin: 0px 2px;
+    cursor: pointer;
+}
+
+.overlay-top-right-button:hover {
+    border-color: var(--button-border-hover);
+    background-color: var(--button-bg-hover);
+}
+
+.overlay-top-right-button span {
+    font-size: 1.3rem;
+}
+
+
+/* OVERLAY BOTTOM */
+
+.overlay-bottom-left, .overlay-bottom-right {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    padding: 5px;
+}
+
+.overlay-bottom-left {
+    height: 100%;
+    width: 40%;
+}
+
+.overlay-bottom-left-buy-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--button-border);
+    background-color: var(--button-bg);
+    color: var(--text-white);
+    border-radius: 50%;
+    height: 100%;
+    width: 45px;
+    margin: 0px 2px;
+    cursor: pointer;
+}
+
+.overlay-bottom-left-buy-button:hover {
+    border-color: var(--button-border-hover);
+    background-color: var(--button-bg-hover);
+}
+
+.overlay-bottom-left-balance,  .overlay-bottom-left-bet {
+    border: 1px solid var(--button-border);
+    background-color: var(--button-bg);
+    color: var(--text-white);
+    height: 100%;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    margin: 0px 2px;
+}
+
+.overlay-bottom-left-balance-title, .overlay-bottom-left-bet-title {
+    font-size: 0.75rem;
+    padding: 1px;
+}
+
+.overlay-bottom-left-balance-amount, .overlay-bottom-left-bet-amount {
+    font-size: 1.1rem;
+    padding: 1px;
+    font-weight: bold;
+    color: var(--text-highlight);
+}
+
+.overlay-bottom-mid-chips {
+    height: 100%;
+    width: 20%;
+}
+
+.overlay-bottom-mid-chips-list {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.overlay-bottom-mid-chips-slot img {
+    height: 45px;
+    margin: 0px 2px 0px 2px;
+}

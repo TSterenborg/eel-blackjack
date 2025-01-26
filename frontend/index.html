@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 7: Blackjack</title>
+
+    <!-- JS -->
+    <script type="text/javascript" src="/eel.js" defer></script>
+    <script type="module" src="./js/app.js" defer></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/root.css">
+    <link rel="stylesheet" href="./css/overlay.css">
+    <link rel="stylesheet" href="./css/popup.css">
+
+    <!-- FONTS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div class="game">
+
+        <div class="overlay-top">
+            <div class="overlay-top-left"></div>
+            <div class="overlay-top-right">
+                <button class="overlay-top-right-button">
+                    <span class="material-symbols-outlined">scoreboard</span> 
+                </button>
+            </div>
+        </div>
+
+        <div class="main-window">
+
+            <!-- BETTING POPUP -->
+            
+            <div class="place-bet-container" id="placeBetContainer">
+                <div class="place-bet">
+                    <div class="place-bet-animation1" id="placeBetAnimation1">
+                        <h1>PLACE YOUR BETS</h1>
+                        <div class="place-bet-buttons">
+                            <div class="place-bet-action-button">
+                                <span>UNDO</span>
+                                <button id="undoButton">
+                                    <span class="material-symbols-outlined">undo</span>
+                                </button>
+                            </div>
+                
+                            <button class="place-bet-chip-button" data-value="1">
+                                <img src="./assets/img/chips/1.svg" alt="1">
+                            </button>
+                            <button class="place-bet-chip-button" data-value="5">
+                                <img src="./assets/img/chips/5.svg" alt="5">
+                            </button>
+                            <button class="place-bet-chip-button" data-value="25">
+                                <img src="./assets/img/chips/25.svg" alt="25">
+                            </button>
+                            <button class="place-bet-chip-button" data-value="100">
+                                <img src="./assets/img/chips/100.svg" alt="100">
+                            </button>
+                            <button class="place-bet-chip-button" data-value="500">
+                                <img src="./assets/img/chips/500.svg" alt="500">
+                            </button>
+                            <button class="place-bet-chip-button" data-value="2500">
+                                <img src="./assets/img/chips/2500.svg" alt="2500">
+                            </button>
+                            <button class="place-bet-chip-button" data-value="5000">
+                                <img src="./assets/img/chips/5000.svg" alt="5000">
+                            </button>
+                            <button class="place-bet-chip-button" data-value="10000">
+                                <img src="./assets/img/chips/10000.svg" alt="10000">
+                            </button>
+                            
+                            <div class="place-bet-action-button">
+                                <button id="clearChipsButton">
+                                    <span class="material-symbols-outlined">delete</span>
+                                </button>
+                                <span>CLEAR</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="placeBetAnimation2">
+                        <button class="place-bet-deal-now" id="dealNowButton">
+                            <span class="material-symbols-outlined" id="icon">playing_cards</span>
+                            DEAL NOW
+                        </button>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- GAME WINDOW -->
+
+            <div class="game-container">
+                <div class="game-hands" id="gameHands">
+                    <div class="game-hands-container">
+                        <h2 class="hand-title">DEALER:</h2>
+                        <div class="dealer-hand" id="dealerHand"></div>
+                        <h2 class="hand-title">YOU:</h2>
+                        <div class="player-hand" id="playerHand"></div>
+                    </div>
+                </div>
+
+                <div class="show-win-loss">
+                    <div class="show-win-loss-container">
+                        <div class="show-win" id="showWin">
+                            <div class="show-win-container">Player Won!</div>
+                        </div>
+                        <div class="show-loss" id="showLoss">
+                            <div class="show-loss-container">Player Lost!</div>
+                        </div>
+                        <div class="show-tie" id="showTie">
+                            <div class="show-tie-container">Player Ties!</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-decision" id="game-decision-id">
+                    <div class="game-decision-options">
+                        <div class="game-hit-stand">
+                            <button class="option-button hit" id="option-button-hit">HIT</button>
+                            <button class="option-button stand" id="option-button-stand">STAND</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="overlay-bottom">
+            <div class="overlay-bottom-left">
+                <div class="overlay-bottom-left-buy">
+                    <button class="overlay-bottom-left-buy-button">
+                        <span class="material-symbols-outlined">attach_money</span>
+                    </button>
+                </div>
+                <div class="overlay-bottom-left-balance">
+                    <span class="overlay-bottom-left-balance-title">BALANCE</span>
+                    <span class="overlay-bottom-left-balance-amount" id="balance">$ 0</span>
+                </div>
+                <div class="overlay-bottom-left-bet">
+                    <span class="overlay-bottom-left-bet-title">TOTAL BET</span>
+                    <span class="overlay-bottom-left-bet-amount" id="gameBalance">$ 0</span>
+                </div>
+            </div>
+            <div class="overlay-bottom-mid-chips">
+                <div class="overlay-bottom-mid-chips-list" id="gameChipsContainer"></div>
+            </div>
+            <div class="overlay-bottom-right"></div>
+        </div>
+
+    </div>
+</body>
+</html>
